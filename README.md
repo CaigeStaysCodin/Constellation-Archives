@@ -1,3 +1,59 @@
+[VERSION 2.3 - LATEST FEATURES & DEBUG MENU]
+
+* MO2 Profile Parsing    : Direct parsing for Mod Organizer 2 profile configurations.
+* Deep Conflict Analysis : Asset scanning logic to spot overlapping mods and file conflicts.
+* Patch Pinning          : Dedicated handling to lock StarUI mods and patches in position.
+* LOOT Integration       : Optional LOOT integration for automated load order sorting.
+* JSON Rule Overrides    : Custom JSON overrides to adjust sorting logic without editing main script.
+* Automated Logging      : Game-specific log folders and database tracking.
+* Safety Dry-Run Mode    : Simulation mode to test load order changes safely before writing. This is so I can build trust with the modders in different communities. I want you to know this code doesn't harm you! I'm just here to help! Now you can see every step that I perform to know if I'm okay to run!
+* DEBUG Manager          : Integrated crash management featuring custom splash screen & log viewer.
+
+[VERSION 2.1 - STARUI & FREE LANES PATCH INTELLIGENCE]
+
+* Automatic StarUI Detection      : Checks mod list for StarUI Inventory and verifies menu components.
+* Smart Free Lanes Reordering     : Shifts Free Lanes patch directly below base StarUI for .swf overrides.
+* Targeted Conflict Exclusions    : Custom-tags expected StarUI .swf overrides to prevent false error flags.
+* PowerShell List Stability Fix   : Upgraded data structures (System.Collections.Generic.List[PSCustomObject]).
+
+[VERSION 2.0 - CORE ENGINE UPDATES]
+
+* Instant AppData Profile Resolver: Targets standard MO2 AppData/LocalAppData paths with manual fallback.
+* Local Database Caching          : Initializes mod_database.db to cache mod categories for offline use.
+* Deep Analysis & Conflict Checker: Scans loose files across enabled mods to output conflict reports.
+* Live Mod Counter & Progress Bar : Displays dynamic Write-Progress bar and real-time scanning counter.
+* SFSE & Framework Verification   : Ensures sfse_loader.exe placement and scans for core frameworks.
+
+---
+
+# ==================================================================================================
+IMPORTANT OPERATIONAL NOTICE
+
+## [!] STRONGLY RECOMMENDED: Keep Mod Organizer 2 CLOSED while running this tool.
+1. Direct File Access : Works on plugins.txt, loadorder.txt, and modlist.txt on disk.
+2. Prevents Overwrites: MO2 holds load orders in memory and overwrites external disk edits on exit.
+3. UI Synchronization : MO2 does not refresh interface elements in real time when files change.
+
+# ==================================================================================================
+BEST PRACTICE WORKFLOW
+
+## Step 1: Close Mod Organizer 2 completely.
+Step 2: Run your .bat launcher script and let the sorting engine complete its process.
+Step 3: Reopen Mod Organizer 2 to review your newly categorized load order setup.
+
+# ==================================================================================================
+KEY PROGRAM FEATURES MATRIX
+
+## FEATURE                             | FUNCTION
+------------------------------------+-------------------------------------------------------------
+Instant AppData Profile Finder      | Checks %APPDATA% & %LOCALAPPDATA% paths instantly.
+Live Mod Counter & Tracker          | Displays real-time terminal progress bar as mods scan.
+Local Database Caching              | Stores Nexus category data into local mod_database.db file.
+SFSE Validator                      | Verifies sfse_loader.exe location in main game root directory.
+Deep Analysis & Conflict Checker    | Scans loose files to detect data overlaps & overwrite conflicts.
+Categorized Sorting Engine          | Sorts ESM/ESP/ESL files into clean logical structure.
+Dual-File MO2 Sync                  | Updates plugins.txt, loadorder.txt, and modlist.txt in sync.
+
 # Constellation-Archives-v2.1-REVISED-
 This is the .zip file for my auto-sorter mod tool for Mod Organizer 2. Please see my Nexus Mod Page for more details. 
 https://www.nexusmods.com/starfield/mods/18126
